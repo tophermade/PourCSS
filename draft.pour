@@ -1,0 +1,26 @@
+// variables
+var textColor 	= "#333";
+
+
+
+// modules
+mod basics(param1, param2){
+	font-size: param1
+	background: url(param2)
+}
+
+
+
+// syntax examples
+header{
+	margin: 10px
+	padding: 10px
+	color: $textColor
+
+	.nested-class{
+		position: relative
+		font-size: 18px
+	}
+
+	basics(12px, img/bg.jpg)
+}
