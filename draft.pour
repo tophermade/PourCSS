@@ -13,6 +13,8 @@ mod basics(param1, param2){
 
 
 // syntax examples
+///	pretty straightforward variable and module usage. most interesting
+/// things are @ which is for media queries
 header{
 	margin: 10px
 	padding: 10px
