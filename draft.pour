@@ -1,5 +1,6 @@
 // variables
 var textColor 	= "#333";
+var tablet		= "960px"
 
 
 
@@ -23,4 +24,24 @@ header{
 	}
 
 	basics(12px, img/bg.jpg)
+
+	@tablet{
+		max-width: 90%
+	}
+
+	@960px{
+		max-width: 940px
+	}
+}
+
+article{
+	module(14px, rgba(0,0,0,.5))
+
+	@tablet{
+		max-width: 80%
+	}
+
+	@960px{
+		max-width: 880px
+	}
 }
