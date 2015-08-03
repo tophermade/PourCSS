@@ -1,6 +1,6 @@
 // variables
 var textColor 	= "#333";
-var tablet		= "960px"
+var tablet		= "768px"
 
 
 
@@ -14,7 +14,7 @@ mod basics(param1, param2){
 
 // syntax examples
 ///	pretty straightforward variable and module usage. most interesting
-/// things are @ which is for media queries
+///	things are @ which is for media queries
 header{
 	margin: 10px
 	padding: 10px
@@ -37,7 +37,7 @@ header{
 }
 
 article{
-	module(14px, rgba(0,0,0,.5))
+	basics(14px, rgba(0,0,0,.5))
 
 	@tablet{
 		max-width: 80%
@@ -45,5 +45,46 @@ article{
 
 	@960px{
 		max-width: 880px
+	}
+}
+
+
+
+// syntax examples output
+header{
+	margin: 10px;
+	padding: 10px;
+	color: #333;
+	font-size: 12px;
+	background: url(img/bg.jpg);
+}
+
+header .nested-class{
+	position: relative;
+	font-size: 18px;
+}
+
+article{
+	font-size: 14px;
+	background: rgba(0,0,0,.5);
+}
+
+@media screen and (min-width: 768px){
+	header{
+		max-width: 90%;
+	}
+
+	article{
+		max-width: 80%;
+	}
+}
+
+@media screen and (min-width:960px){
+	header{
+		max-width: 940px;
+	}
+
+	article{
+		max-width: 880px;
 	}
 }
