@@ -62,6 +62,10 @@ article{
 	@960px{
 		max-width: 880px
 	}
+
+	@(min-aspect-ratio: 16/9){
+		background: #eee;
+	}
 }
 
 
@@ -111,5 +115,11 @@ article{
 
 	article{
 		max-width: 880px;
+	}
+}
+
+@media screen and (min-aspect-ratio: 6/9) {
+	article{
+		background: #eee;
 	}
 }
