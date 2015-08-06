@@ -1,28 +1,43 @@
 // variables
-var textColor 	= "#333";
-var tablet		= "768px"
+$textColor 	= "#333";
+$tablet		= "768px"
 
 
 
 // modules
-mod basics(param1, param2){
+mod	basics(param1, param2){
 	font-size: param1
 	background: url(param2)
 }
 
 
 
+//	mixdown example
+///	any class can be used as a mixdown just like in LESS, but better,
+///	instead of "mixing in" a variety of css and making the compiled
+///	output huge like existing preprocessors, it yields a single instance
+///	of the css mixdown, and applies it to the selectors once.
+.mixdown{
+	font-style: italic;
+	border-radius: 5px;
+}
+
+
+
 // syntax examples
 ///	pretty straightforward variable and module usage. most interesting
-///	things are @ which is for media queries
+///	things are @ which is for media queries & mixdowns are pretty sick
 header{
 	margin: 10px
 	padding: 10px
 	color: $textColor
 
+	.mixdown
+
 	.nested-class{
 		position: relative
 		font-size: 18px
+		.mixdown
 	}
 
 	basics(12px, img/bg.jpg)
@@ -38,6 +53,7 @@ header{
 
 article{
 	basics(14px, rgba(0,0,0,.5))
+	.mixdown
 
 	@tablet{
 		max-width: 80%
@@ -49,8 +65,17 @@ article{
 }
 
 
+nav{
+	.mixdown
+}
+
 
 // syntax examples output
+header, header .nested-class, article, nav{
+	font-style: italic;
+	border-radius: 5px;
+}
+
 header{
 	margin: 10px;
 	padding: 10px;
