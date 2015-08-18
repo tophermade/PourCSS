@@ -31,8 +31,6 @@ If this manages to make it beyond research, it
 will ship with cross platform compilation tools 
 GUI and otherwise.
 
-
-
 ##### Caveats
-Media queries, while markedly more useful already
-need to support features not just widths.
+Media query sorting is presently an issue for
+anything other than min/max width & height.
